@@ -1,11 +1,15 @@
 package main;
 
-public class Calendar {
+public class Calendar  {
 
 	int year;
 
-	public Calendar(int year) {
+	public Calendar(int year)  {
 		this.year = year;
+		if (year<0) {
+			throw new ArithmeticException("ZeroDivisionError");
+			
+		}
 	}
 
 	public boolean isLeapYear() {
